@@ -3,9 +3,9 @@ Objetivo do projeto é fazer uma demonstração breve sobre conhecimentos de Git
 
 # Tech Stack
  - Linguagens
-  - HTML5
-  - CSS3
-
+   - HTML5
+   - CSS3
+ 
 # Status do projeto
 - Em Desenvolvimento 🚧
 
