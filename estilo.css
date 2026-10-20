@@ -4,10 +4,11 @@
     box-sizing: border-box;
     letter-spacing: 0.02em;
     font-family: var(--font-family);
+    
 }
 
 :root {
-    --primary-color: #2011ac;
+    --primary-color: #2011ac;   
     --secondary-color: #2ecc71;
     --font-family: 'Arial', sans-serif;
 }
@@ -109,36 +110,33 @@ section.apresentacao {
     text-align: center;
     flex-direction: column;
     background-color: var(--primary-color);
-    width: min(90vw, 630px);
-    height: 250px;
-    padding: 30px;
+    width: clamp(280px, 60vw, 620px);
+    min-height: 180px;
+    height: auto;
+    padding: clamp(18px, 2vw, 30px);
     color: #fff;
-    border-radius: 135px;
     z-index: 4;
     position: relative;
     top: 0;
-    margin-top: -80px;
+    margin-top: max(-120px, -10vw);
     margin-left: auto;
     margin-right: auto;
     left: 0;
-    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    
 }
 
 section.apresentacao h1,
 section h1 {
-    font-size: 1.8rem;
+    font-size: clamp(1.15rem, 1.5vw + 0.75rem, 2rem);
+    line-height: 1.2;
     margin-top: -5px;
-}
-
-@media (max-width: 600px) {
-    section.apresentacao h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-    }
+    width: 100%;
 }
 
 section p {
-    font-size: 16px;
+    font-size: clamp(0.85rem, 0.8vw + 0.65rem, 1rem);
+    line-height: 1.5;
     margin-top: 20px;
 }
 
@@ -161,6 +159,7 @@ section button {
     position: relative;
     top: 40px;
     width: 100%;
+    
 }
 
 .valores {
@@ -185,6 +184,7 @@ article {
     justify-content: flex-start;
     align-items: center;
     color: #fff;
+    border-radius: 10px;
 }
 
 article ul {
@@ -219,7 +219,6 @@ footer {
     padding: 20px;
     text-align: center;
     align-items: center;
-    position: fixed;
     height: 30px;
     width: 100%;
     display: flex;
