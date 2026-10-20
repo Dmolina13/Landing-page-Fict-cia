@@ -5,7 +5,7 @@ Objetivo do projeto é fazer uma demonstração breve sobre conhecimentos de Git
  - Linguagens
    - HTML5
    - CSS3
- 
+
 # Status do projeto
 - Em Desenvolvimento 🚧
 
