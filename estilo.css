@@ -8,9 +8,11 @@
 }
 
 :root {
-    --primary-color: #2011ac;   
+    --primary-color: #0f172a;   
     --secondary-color: #2ecc71;
     --font-family: 'Arial', sans-serif;
+    --color-text: #e9f0f5;
+    --color-h1: #dddddd;
 }
 
 body {
@@ -114,7 +116,7 @@ section.apresentacao {
     min-height: 180px;
     height: auto;
     padding: clamp(18px, 2vw, 30px);
-    color: #fff;
+    color: var(--color-text);
     z-index: 4;
     position: relative;
     top: 0;
@@ -132,6 +134,7 @@ section h1 {
     line-height: 1.2;
     margin-top: -5px;
     width: 100%;
+    color: var(--color-h1);
 }
 
 section p {
@@ -142,7 +145,7 @@ section p {
 
 section button {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--color-text);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -183,7 +186,7 @@ article {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: #fff;
+    color: var(--color-text);
     border-radius: 10px;
 }
 
