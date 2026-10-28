@@ -56,20 +56,6 @@ header {
     height: auto;
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 80px;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    margin-left: 15px;
-}
 
 main {
     display: flex;
@@ -92,11 +78,11 @@ main {
 
 .halter img {
     width: 100%;
-    height: auto;
+    height: min(auto, 400px);
 }
 
 hr {
-    height: 20px;
+    height: 15px;
     background-color: var(--primary-color);
     margin-top: -3px;
     width: 100%;
@@ -115,16 +101,17 @@ section.apresentacao {
     width: clamp(280px, 60vw, 620px);
     min-height: 180px;
     height: auto;
-    padding: clamp(18px, 2vw, 30px);
+    padding: 40px 32px;
     color: var(--color-text);
     z-index: 4;
     position: relative;
-    top: 0;
+    top: min(0px, 30px);
     margin-top: max(-120px, -10vw);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     left: 0;
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
     
 }
 
@@ -138,9 +125,10 @@ section h1 {
 }
 
 section p {
-    font-size: clamp(0.85rem, 0.8vw + 0.65rem, 1rem);
+    font-size:18px;
     line-height: 1.5;
     margin-top: 20px;
+    font-weight: 400
 }
 
 section button {
@@ -153,7 +141,50 @@ section button {
     margin-top: 20px;
     border-radius: 5px;
 }
+.trajetoria{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    width: 100%;
+    border-style: solid;
+  margin-top: 80px;
+}
 
+#texto-01.trajetoria-text, #texto-03.trajetoria-text,#texto-02.trajetoria-text  {
+    background-color: var(--primary-color);
+    color: var(--color-text);
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: 80px;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--color-text);
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+ .trajetoria-text h2{
+    color: var(--color-h1);
+}
+ .trajetoria-text p {
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-top: 18px;
+    font-weight: 400;
+    font-size: 18px;
+}
 .planos {
     display: flex;
     justify-content: center;
@@ -162,23 +193,25 @@ section button {
     position: relative;
     top: 40px;
     width: 100%;
-    
+  margin-top: 80px;
 }
 
 .valores {
     display: flex;
     flex-direction: row;
     margin-top: 80px;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    width: 80%;
     gap: 20px;
-    padding: 0 20px;
+    margin-left: 180px;
+    
 }
 
-article {
+.plano-txt {
     background-color: var(--primary-color);
     padding-top: 20px;
     padding-bottom: 20px;
+    border: 2px solid transparent;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     height: auto;
@@ -187,32 +220,47 @@ article {
     justify-content: flex-start;
     align-items: center;
     color: var(--color-text);
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s ease;
 }
 
-article ul {
-    margin-top: 20px;
+.plano-txt:hover {
+    border-color: var(--secondary-color);
+    border-width: 5px;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+}
+
+ .plano-txt h2{
+    color: var(--color-h1);
+}
+ .plano-txt ul {
+    margin-top: 18px;
     list-style-position: inside;
+    font-weight: 400
 }
 
-article li {
-    font-size: 14px;
+ .plano-txt li {
+    font-size: 20px;
     margin-top: 7px;
+    font-weight: 400
 }
 
-article h2 {
+ .plano-txt h2 {
     font-size: 20px;
     margin-top: 0px;
 }
 
-article p {
+ .plano-txt p {
     font-size: 16px;
     margin-top: auto;
     margin-bottom: 20px;
     padding-top: 40px;
 }
 
-article button {
+ .plano-txt button {
     margin-top: 0;
 }
 
@@ -360,5 +408,194 @@ footer p {
     article {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE PARA CELULARES */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Evita rolagem horizontal */
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Cabeçalho */
+    header {
+        width: 100%;
+        height: auto;
+        min-height: 70px;
+        padding: 10px 16px;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .logo img {
+        width: 75px;
+        height: auto;
+    }
+
+    /* Imagem principal */
+    .halter {
+        width: 100%;
+    }
+
+    .halter img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    hr {
+        height: 8px;
+        margin-top: 0;
+    }
+
+    /* Apresentação */
+    section.apresentacao {
+        width: calc(100% - 32px);
+        max-width: 420px;
+        min-height: auto;
+        height: auto;
+        padding: 24px 18px;
+        margin: -40px 0 0;
+        top: 0;
+        left: 0;
+        border-radius: 16px;
+    }
+
+    section.apresentacao h1 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-top: 0;
+    }
+
+    section.apresentacao p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 14px;
+    }
+
+    section button {
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 12px 18px;
+    }
+
+    /* Trajetória */
+    .trajetoria {
+        width: 100%;
+        padding: 0 16px;
+        top: 25px;
+        border: none;
+    }
+
+    #texto-01.trajetoria-text, #texto-03.trajetoria-text {
+        width: 100%;
+        max-width: 500px;
+        margin: 35px auto 0;
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .trajetoria-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .trajetoria-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Planos */
+    .planos {
+        width: 100%;
+        padding: 0 16px;
+        top: 25px;
+    }
+
+    .planos > h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    /* Organiza os planos em uma coluna */
+    .valores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 24px;
+        margin: 35px 0 0;
+        padding: 0;
+    }
+
+    .plano-txt,
+    article {
+        width: 100%;
+        max-width: 380px;
+        min-width: 0;
+        height: auto;
+        padding: 24px 16px;
+    }
+
+    .plano-txt h2 {
+        font-size: 1.25rem;
+    }
+
+    .plano-txt li {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .plano-txt p {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Rodapé */
+    footer {
+        position: static;
+        width: 100%;
+        min-height: 45px;
+        height: auto;
+        padding: 14px 10px;
+        margin-top: 45px;
+    }
+
+    footer p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+}
+
+/* Celulares muito estreitos */
+@media screen and (max-width: 360px) {
+
+    section.apresentacao {
+        padding: 20px 14px;
+    }
+
+    section.apresentacao h1 {
+        font-size: 1.2rem;
+    }
+
+    .planos > h1 {
+        font-size: 1.3rem;
+    }
+
+    .plano-txt,
+    article {
+        padding: 20px 12px;
     }
 }
