@@ -1,3 +1,4 @@
+/*Corpo da página(externo) */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
     font-family: var(--font-family);
     
 }
-
+/*Variaveis */
 :root {
     --primary-color: #0f172a;   
     --secondary-color: #2ecc71;
@@ -14,7 +15,7 @@
     --color-text: #e9f0f5;
     --color-h1: #dddddd;
 }
-
+/*Corpo da página(interno) */
 body {
     background-color: #E0E0E0;
     margin: 0;
@@ -27,12 +28,12 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
+/* Imagens */
 img {
     max-width: 100%;
     display: block;
 }
-
+/* Cabeça da página */
 header {
     background-color: var(--primary-color);
     color: #fff;
@@ -44,19 +45,13 @@ header {
     align-items: center;
     height: 80px;
 }
-
+/* Logo */
 .logo {
     height: auto;
     width: auto;
     margin-left: 70px;
 }
-
-.logo img {
-    width: 100px;
-    height: auto;
-}
-
-
+/* Conteúdo principal */
 main {
     display: flex;
     flex-direction: column;
@@ -65,7 +60,7 @@ main {
     font-family: var(--font-family);
     padding-bottom: 80px;
 }
-
+/* Imagem de destaque(banner) */
 .halter {
     display: flex;
     justify-content: center;
@@ -76,11 +71,7 @@ main {
     position: relative;
 }
 
-.halter img {
-    width: 100%;
-    height: min(auto, 400px);
-}
-
+/* linha */
 hr {
     height: 15px;
     background-color: var(--primary-color);
@@ -133,7 +124,7 @@ section p {
 
 section button {
     background-color: var(--secondary-color);
-    color: var(--color-text);
+    color: var(--primary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -149,31 +140,54 @@ section button {
     position: relative;
     top: 40px;
     width: 100%;
-    border-style: solid;
-  margin-top: 80px;
+    margin-top: 80px;
 }
 
 #texto-01.trajetoria-text, #texto-03.trajetoria-text,#texto-02.trajetoria-text  {
     background-color: var(--primary-color);
     color: var(--color-text);
     width: 500px;
+    min-height: 320px;
     padding: 20px;
     text-align: center;
-    margin-left: 180px;
     margin-top: 80px;
     border: 2px solid transparent;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     color: var(--color-text);
     border-radius: 16px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-
-
+#imagem, .trajetoria-img {
+    background-color: var(--primary-color);
+    color: var(--color-text);
+    width: 500px;
+    min-height: 320px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 80px;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+.metodo,.performance, .acompanhamento {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 150px;
+}
  .trajetoria-text h2{
     color: var(--color-h1);
 }
@@ -200,17 +214,15 @@ section button {
     display: flex;
     flex-direction: row;
     margin-top: 80px;
-    justify-content: space-between;
+    justify-content: center;
     width: 80%;
-    gap: 20px;
+    gap: 130px;
     margin-left: 180px;
     
 }
 
 .plano-txt {
     background-color: var(--primary-color);
-    padding-top: 20px;
-    padding-bottom: 20px;
     border: 2px solid transparent;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -223,8 +235,20 @@ section button {
     border-radius: 16px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
     transition: border-color 0.2s ease;
+    padding: 15px;
 }
 
+.plano-txt .preco {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.plano-txt .preco span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+}
 .plano-txt:hover {
     border-color: var(--secondary-color);
     border-width: 5px;
@@ -232,7 +256,17 @@ section button {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 
 }
+.plano-txt ul {
+    list-style: none;
+    text-align: left;
 
+    width: 100%;
+}
+
+.plano-txt li::before {
+    content: "✓ ";
+    color: var(--secondary-color);
+}
  .plano-txt h2{
     color: var(--color-h1);
 }
@@ -262,6 +296,7 @@ section button {
 
  .plano-txt button {
     margin-top: 0;
+    color: #0f172a;
 }
 
 footer {
@@ -286,7 +321,9 @@ footer p {
 @media (max-width: 1100px) {
     .valores {
         flex-wrap: wrap;
+        width: 100%;
         gap: 24px;
+        margin-left: 0;
         padding: 0 20px;
     }
 
@@ -316,6 +353,7 @@ footer p {
         flex-direction: column;
         align-items: center;
         margin-top: 40px;
+        margin-left: 0;
     }
 
     article {
