@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal website for Molina">
     <link rel="stylesheet" href="estilo.css">
-    <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        rel=”stylesheet”
-        crossorigin=”anonymous”
-    >
     <title>Molina Personal</title>
 </head>
 <body>
@@ -21,42 +16,60 @@
     
     <main>
         <div class="halter">
-            <img src="imagens/halteres .png" alt="fileira de halteres">
+            <img src="imagens/halteres.png" alt="fileira de halteres">
         </div>
         <hr>
         <section class="apresentacao">
             <h1>Treino inteligente e seguro, feito para a sua rotina.</h1>
             <p>Chega de fichas genéricas e treinos que não dão resultados. 
                 Descubra como a combinação de biomecânica e acompanhamento 
-                individualizado &nbsp; vai destravar a sua evolução, permitindo que 
-                você ganhe força e &nbsp;transforme o seu corpo com segurança, mesmo tendo uma rotina corrida.</p>
+                individualizado vai destravar a sua evolução, permitindo que 
+                você ganhe força e transforme o seu corpo com segurança, mesmo tendo uma rotina corrida.</p>
             <button class="btn">Agende sua avaliação</button>
         </section>
        
         <div class="trajetoria">
             <h1 style="color: var(--primary-color);">MINHA TRAJETÓRIA</h1>
-
-            <article id="texto-01" class="trajetoria-text">
-                <h2>Da Paixão ao Método</h2>
-                <p>Minha jornada na Educação Física começou com um propósito claro: transformar a saúde e a 
+            <div class="metodo">
+                
+                <article id="texto-01" class="trajetoria-text">
+                    <h2>Da Paixão ao Método</h2>
+                    <p>Minha jornada na Educação Física começou com um propósito claro: transformar a saúde e a 
                     autoestima das pessoas através do movimento consciente. Ao longo dos anos atuando em academias 
                     e consultoria, percebi que o maior obstáculo dos alunos não era a falta de vontade, mas sim fichas 
                     genéricas e treinos que ignoravam suas individualidades.</p>
-            </article>
-            
-            <article id="texto-02" class="trajetoria-text">
-                <h2>Foco em Biomecânica e Performance</h2>
-                <p>Decidi seguir uma abordagem diferente. Especializei minha metodologia em biomecânica do exercício e 
+                </article>
+                
+                <article id="imagem" class="trajetoria-text">
+                    <img src="imagens/metodo.png" alt="Método">
+                </article>
+            </div>
+           <div class="performance">
+                
+            <article id="imagem" class="trajetoria-text">
+                    <img src="imagens/performance.png" alt="Performance">
+                </article>
+                
+                <article id="texto-02" class="trajetoria-text">
+                    <h2>Foco em Biomecânica e Performance</h2>
+                    <p>Decidi seguir uma abordagem diferente. Especializei minha metodologia em biomecânica do exercício e 
                     periodização de treino. O objetivo é garantir que cada movimento seja executado com a técnica perfeita, 
                     prevenindo lesões e maximizando o ganho de massa magra e a queima de gordura no menor tempo possível.</p>
-            </article>
-
-            <article id="texto-03" class="trajetoria-text">
+                </article>
+            </div>
+            <div class="acompanhamento">
+                
+                <article id="texto-03" class="trajetoria-text">
                 <h2>Acompanhamento Sob Medida</h2>
                 <p>Hoje, ajudo dezenas de alunos a alcançarem sua melhor versão física — seja para quem está começando do zero 
                     ou para quem busca alta performance. Meu trabalho é ajustar a rotina de treinos à sua vida, e não o contrário,
                      garantindo resultados consistentes e definitivos.</p>
-            </article>
+                </article>
+
+                <article id="imagem" class="trajetoria-text">
+                    <img src="imagens/acompanhamento.jpg" alt="Acompanhamento">
+                </article>
+            </div>
 
         </div>
             
@@ -71,7 +84,7 @@
                         <li>Fichas no app</li>
                         <li>Acompanhamento semanal</li>
                     </ul>
-                    <p>Preço: R$ 149,99/mês</p>
+                    <p class="preco">R$ 149,99<span>/mês</span></p>
                     <button>Escolha esse plano</button>
                 </article>
 
@@ -83,7 +96,7 @@
                         <li>Acompanhamento VIP</li>
                         <li>Correção de Postura</li>
                     </ul>
-                    <p>Preço: R$ 399,99/mês</p>
+                    <p class="preco">R$ 399,99<span>/mês</span></p>
                     <button>Escolha esse plano</button>
                 </article>
 
@@ -97,7 +110,7 @@
                         <li>Plano Nutricional</li>
                         <li>Treino personalizado</li>
                     </ul>
-                    <p>Preço: R$ 499,99/mês</p>
+                    <p class="preco">R$ 499,99<span>/mês</span></p>
                     <button>Escolha esse plano</button>
                 </article>
             </section>
