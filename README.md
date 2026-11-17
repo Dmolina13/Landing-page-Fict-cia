@@ -2,7 +2,10 @@
 
 Landing page responsiva de uma empresa fictícia, desenvolvida para praticar **HTML5, CSS3 e boas práticas de Frontend**, com foco em layout organizado e código limpo.
 
-🔗 **Ver o site no ar:** [link do GitHub Pages]
+🔗 **Ver o site no ar:** https://dmolina13.github.io/Landing-page-Fict-cia/
+
+## Imagens
+{diretório das imagens}
 
 ## 🛠️ Tecnologias
 
