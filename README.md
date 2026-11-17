@@ -4,9 +4,6 @@ Landing page responsiva de uma empresa fictícia, desenvolvida para praticar **H
 
 🔗 **Ver o site no ar:** https://dmolina13.github.io/Landing-page-Fict-cia/
 
-## Imagens
-{diretório das imagens}
-
 ## 🛠️ Tecnologias
 
 - **HTML5** – estrutura semântica da página
